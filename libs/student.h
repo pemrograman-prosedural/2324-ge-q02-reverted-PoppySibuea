@@ -15,5 +15,6 @@ struct student_t
 
 struct student_t create_student(char *input);
 void print_student(struct student_t mhs);
+void printStudentdetails (struct student_t mhs);
 #endif
 

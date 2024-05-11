@@ -9,8 +9,8 @@
 
 int main(int _argc, char **_argv)
 {
-    dorm *dorms = (dorms*) malloc(* sizeof(dorm));
-    student *student = (student*) malloc(1 * sizeof(Student));
+    struct dorm_t *dorms =  malloc (10 * sizeof(dorms));
+    struct student_t *student =  malloc(1 * sizeof(student));
     unsigned short totalStudent;
     unsigned short totaldorm;
     char line[255];
@@ -25,7 +25,7 @@ int main(int _argc, char **_argv)
             int len = strlen(line);
             for (short a = 0; a < len; a++){
                 if(line[a] == '\r' || line[a] == '\n'){
-                    for(short b = a; < len; b++) { line[b] = line[b + 1];
+                    for(short b = a; b < len; b++) { line[b] = line[b + 1];
                     }
                     len--;
                     a--;
@@ -49,7 +49,7 @@ int main(int _argc, char **_argv)
 
         else if (strcmp(line, "student-print-all-detail") == 0 ){
             for (short i=0; i<totalStudent; i++){
-                printStudentdetails(student[1]);
+                printStudentdetails(student[i]);
             }
         }
 
@@ -72,7 +72,7 @@ int main(int _argc, char **_argv)
                     student = (student*) realloc(student, (totalStudent+1) * sizeof(Student));
                 }           
                 if ( strcmp(token, "male") == 0 ) {
-                    students[totalStudent] = create_student(_nim, _nama, _tahun, GENDER_MALE);
+                    student[totalStudent] = create_student(_nim, _nama, _tahun, GENDER_MALE);
                     totalStudent++;
                 }
                 else if( strcmp(token, "female") == 0){

@@ -12,6 +12,6 @@ struct dorm_t
 };
 
 struct dorm_t create_dorm(char *input);
-void print_dorm(struct dorm_t *dorm);
+void print_dorm(struct dorm_t dorm);
 
 #endif
