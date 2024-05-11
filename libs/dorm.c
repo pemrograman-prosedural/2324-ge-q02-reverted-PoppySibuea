@@ -27,4 +27,5 @@ void print_all_dorm(struct dorm_t *dorms, unsigned short int size_dorm)
 void empty_dorm(struct dorm_t *dorm)
 {
     dorm->residents_num = 0;
+    
 }

@@ -8,33 +8,21 @@ student-add#12S21008#Tuani Manurung#2021#male
 student-add#12S21009#Mikhael Pakpahan#2021#male
 student-add#12S21010#Bobby Siagian#2021#male
 student-add#12S21011#Aldi Simamora#2021#male
-dorm-add#Antiokia#5#male
-dorm-add#Mamre#5#male
-dorm-add#Silo#5#male
-dorm-add#Mahanaim#5#male
-dorm-add#Nazaret#5#male
-dorm-add#Pniel#5#female
-dorm-add#Kapernaum#5#female
-student-print-all-detail
-dorm-print-all-detail
+dorm-add#Antiokia#20#male
+dorm-add#Mamre#20#male
 assign-student#12S21001#Antiokia
 assign-student#12S21002#Antiokia
 assign-student#12S21003#Antiokia
 assign-student#12S21004#Antiokia
-assign-student#12S21006#Pniel
-assign-student#12S21007#Pniel
-assign-student#12S21008#Antiokia
-assign-student#12S21009#Antiokia
-assign-student#12S21010#Antiokia
-assign-student#12S21011#Antiokia
-move-student#12S21009#Nazaret
-move-student#12S21010#Nazaret
-move-student#12S21011#Nazaret
-move-student#12S21001#Mahanaim
-move-student#12S21007#Nazaret
-move-student#12S21007#Kapernaum
+assign-student#12S21005#Antiokia
+assign-student#12S21006#Mamre
+assign-student#12S21007#Mamre
+assign-student#12S21008#Mamre
+assign-student#12S21009#Mamre
+assign-student#12S21010#Mamre
 student-print-all-detail
-dorm-empty#Kapernaum
+dorm-print-all-detail
+dorm-empty#Antiokia
 student-print-all-detail
 dorm-print-all-detail
 ---
