@@ -2,6 +2,7 @@
 #define DORM_H
 
 #include "gender.h"
+#include "dorm.h"
 
 struct dorm_t
 {
@@ -13,7 +14,6 @@ struct dorm_t
 
 struct dorm_t create_dorm(char *_name, unsigned short _capacity, enum gender_t _gender);
 void print_all_dorm(struct dorm_t *dorms, unsigned short int size_dorm);
-void print_name_dorm(struct dorm_t *dorms, unsigned short int size_dorm);
 void empty_dorm(struct dorm_t *dorm);
 
 #endif /* DORM_H */
