@@ -30,3 +30,15 @@ void print_dorm(struct dorm_t dorm)
         printf("female\n");
     }
 }
+
+void printdormdetails (struct dorm_t dorm)
+{
+    printf("%s|%hu|", dorm.name, dorm.capacity);
+    if (dorm.gender == GENDER_MALE)
+    {
+        printf("male\n");
+    } else if (dorm.gender == GENDER_FEMALE)
+    {
+        printf("female\n");
+    }
+}

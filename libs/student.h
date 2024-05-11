@@ -13,8 +13,8 @@ struct student_t
     struct dorm_t *dorm;
 };
 
-struct student_t create_student(char *input);
 void print_student(struct student_t mhs);
 void printStudentdetails (struct student_t mhs);
+struct student_t create_student(char *nim, char *nama, char *tahun, enum gender_t gender);
 #endif
 

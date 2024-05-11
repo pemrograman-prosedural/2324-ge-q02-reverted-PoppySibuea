@@ -3,21 +3,13 @@
 #include <stdlib.h>
 #include <string.h> 
 
-struct student_t create_student(char *input)
+struct student_t create_student(char *nim, char *nama, char *tahun, enum gender_t gender)
 {
   struct student_t mhs;
-  strcpy(mhs.id, strtok(NULL, "#"));
-  strcpy(mhs.name, strtok(NULL, "#"));
-  strcpy(mhs.year, strtok(NULL, "#"));
-  char *gender = strtok(NULL, "#");
-  if (strcmp(gender, "male") == 0)
-  {
-    mhs.gender = GENDER_MALE;
-  }
-  else if (strcmp(gender, "female") == 0)
-  {
-    mhs.gender = GENDER_FEMALE;
-  }
+  strcpy(mhs.id, nim); 
+  strcpy(mhs.name, nama);
+  strcpy(mhs.year, tahun);
+  mhs.gender = gender; 
   return mhs;
 }
 

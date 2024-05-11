@@ -53,7 +53,7 @@ int main(int _argc, char **_argv)
             }
         }
 
-        else if ( strcmp(line. "dorm-prit-all-detail") == 0 ){
+        else if ( strcmp(line, "dorm-print-all-detail") == 0 ){
             for (short i=0; i<totaldorm; i++) {
                 printdormdetails(dorms[i]);
             }
@@ -62,21 +62,21 @@ int main(int _argc, char **_argv)
         else {
             char *token = strtok(line, delim);
 
-            if ( strcmp(token, "student-ad") == 0){
+            if ( strcmp(token, "student-add") == 0){
                 token = strtok(NULL, delim); char *_nim = token;
                 token = strtok(NULL, delim); char *_nama = token;
                 token = strtok(NULL, delim); char *_tahun = token;
 
                 token = strtok(NULL, delim);
                 if ( totalStudent > 0 ) {
-                    student = (student*) realloc(student, (totalStudent+1) * sizeof(Student));
+                    student =  realloc(student, (totalStudent+1) * sizeof(student));
                 }           
                 if ( strcmp(token, "male") == 0 ) {
                     student[totalStudent] = create_student(_nim, _nama, _tahun, GENDER_MALE);
                     totalStudent++;
                 }
                 else if( strcmp(token, "female") == 0){
-                    students[totalStudent] = create_student(_nim, _nama, _tahun, GENDER_FEMALE);
+                    student[totalStudent] = create_student(_nim, _nama, _tahun, GENDER_FEMALE);
                     totalStudent++;
                 }
             }
@@ -86,7 +86,7 @@ int main(int _argc, char **_argv)
                 token = strtok(NULL, delim); unsigned short _kapasitas = atoi(token);
                 token = strtok(NULL, delim);
                 if( totaldorm > 0 ) {
-                    dorms = (dorms*) realloc(dorms, (totaldorm+1) * sizeof(dorm));
+                    dorms = realloc(dorms, (totaldorm+1) * sizeof(dorms));
                 }
                 if ( strcmp(token, "male") == 0 ) {
                     dorms[totaldorm] = create_dorm(_nim, _kapasitas, GENDER_MALE);
